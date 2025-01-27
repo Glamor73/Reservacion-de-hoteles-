@@ -1,0 +1,14 @@
+digraph {
+	fontsize=12 rankdir=LR splines=ortho
+	node [fillcolor=lightgrey fontname=Helvetica shape=rect style=filled]
+	Jugador [label=Jugador]
+	Sistema [label=Sistema]
+	Mundo [label=Mundo]
+	Ranking [label=Ranking]
+	Jugador -> Sistema [label="Crear Partida" arrowhead=vee]
+	Sistema -> Mundo [label="Verificar Equipos" arrowhead=vee]
+	Sistema -> Mundo [label="Crear Mapa (Grafo)" arrowhead=vee]
+	Sistema -> Jugador [label="Seleccionar Ubicaciones" arrowhead=vee]
+	Sistema -> Ranking [label="Registrar Resultado" arrowhead=vee]
+	Ranking -> Sistema [label="Actualizar Ranking" arrowhead=vee]
+}
